@@ -1,0 +1,20 @@
+const fs = require('fs');
+const key = require('./serviceAccountKey.json');
+
+console.log('請將以下環境變數添加到 Vercel:');
+console.log('======================================');
+console.log('');
+console.log('FIREBASE_PROJECT_ID=', key.project_id);
+console.log('');
+console.log('FIREBASE_PRIVATE_KEY_ID=', key.private_key_id);
+console.log('');
+console.log('FIREBASE_PRIVATE_KEY=');
+console.log(key.private_key);
+console.log('');
+console.log('FIREBASE_CLIENT_EMAIL=', key.client_email);
+console.log('');
+console.log('FIREBASE_CLIENT_ID=', key.client_id);
+console.log('');
+console.log('FIREBASE_CLIENT_CERT_URL=', key.client_x509_cert_url);
+console.log('');
+console.log('======================================');

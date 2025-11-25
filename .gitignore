@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# Firebase Service Account Key (重要！不要上傳到 Git)
+serviceAccountKey.json
+*-firebase-adminsdk-*.json
+
+# Firebase cache
+.firebase/
+firebase-debug.log
+firestore-debug.log
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Vercel
+.vercel
