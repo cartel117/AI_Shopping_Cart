@@ -7,9 +7,9 @@ let db;
 try {
   let serviceAccount;
   
-  // 檢查是否在 Vercel 環境
-  if (process.env.VERCEL || process.env.FIREBASE_CONFIG) {
-    console.log('🔍 雲端環境偵測');
+  // 檢查是否在雲端環境（Vercel, Railway, 或有 Firebase 環境變數）
+  if (process.env.VERCEL || process.env.RAILWAY_ENVIRONMENT || process.env.FIREBASE_PRIVATE_KEY || process.env.FIREBASE_CONFIG) {
+    console.log('🔍 雲端環境偵測 (Vercel/Railway)');
     
     // 嘗試使用 FIREBASE_CONFIG
     if (process.env.FIREBASE_CONFIG) {
