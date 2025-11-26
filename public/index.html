@@ -264,9 +264,11 @@
                 if (response.ok) {
                     showMessage('登入成功！', 'success');
                     localStorage.setItem('token', data.token);
-                    localStorage.setItem('user', JSON.stringify(data.user));
-                    // 可以在這裡重定向到其他頁面
-                    // window.location.href = '/dashboard';
+                    localStorage.setItem('userEmail', data.user.email);
+                    // 重定向到商品頁面
+                    setTimeout(() => {
+                        window.location.href = '/products.html';
+                    }, 1000);
                 } else {
                     showMessage(data.message || '登入失敗', 'error');
                 }

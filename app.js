@@ -11,7 +11,10 @@ app.use(express.static('./public'));
 
 // API Routes
 const authRoutes = require('./routes/authRoutes');
+const productRoutes = require('./routes/productRoutes');
+
 app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes);
 
 // Page Routes
 app.get('/', (req, res) => {
