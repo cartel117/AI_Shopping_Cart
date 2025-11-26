@@ -38,6 +38,7 @@ class ProductPG {
       const result = await pool.query(query, values);
       return result.rows;
     } catch (error) {
+      console.error('PostgreSQL 查詢錯誤:', error);
       throw new Error(`取得商品列表失敗: ${error.message}`);
     }
   }
